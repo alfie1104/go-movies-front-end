@@ -12,7 +12,7 @@ function App() {
         </div>
         <div className="col text-end">
           {jwtToken === "" ? (
-            <Link to="login">
+            <Link to="/login">
               <span className="badge bg-success">Login</span>
             </Link>
           ) : (
@@ -69,7 +69,12 @@ function App() {
           </nav>
         </div>
         <div className="col-md-10">
-          <Outlet />
+          <Outlet
+            context={{
+              jwtToken,
+              setJwtToken,
+            }}
+          />
         </div>
       </div>
     </div>
