@@ -3,8 +3,13 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import ErrorPage from "./components/ErrorPage";
+import Genres from "./components/Genres";
 import Home from "./components/Home";
 import Movies from "./components/Movies";
+import EditMovie from "./components/EditMovie";
+import ManageCatalogue from "./components/ManageCatalogue";
+import GraphQL from "./components/GraphQL";
+import Login from "./components/Login";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +21,26 @@ const router = createBrowserRouter([
       {
         path: "/movies",
         element: <Movies />,
+      },
+      {
+        path: "/genres",
+        element: <Genres />,
+      },
+      {
+        path: "/admin/movie/0",
+        element: <EditMovie />,
+      },
+      {
+        path: "/manage-catalogue",
+        element: <ManageCatalogue />,
+      },
+      {
+        path: "/graphql",
+        element: <GraphQL />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
   },
