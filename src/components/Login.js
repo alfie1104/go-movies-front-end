@@ -13,7 +13,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("email/pass", email, password);
 
     // build the request payload
     let payload = {
